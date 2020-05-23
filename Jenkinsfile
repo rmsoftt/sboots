@@ -23,7 +23,7 @@ pipeline {
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'maven_3_5_3 {
+                withMaven(maven : 'maven_3_5_3') {
                     sh 'mvn deploy'
                 }
             }
