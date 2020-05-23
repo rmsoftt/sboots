@@ -1,31 +1,28 @@
 pipeline {
     agent any
+    tools {
+            maven 'apache-maven-3.5.3'
+        }
 
     stages {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn clean compile'
-                }
+                    sh 'mvn clean compile -DskipTests'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn test'
-                }
+                    echo 'mvn test'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(maven : 'maven_3_5_3') {
-                    sh 'mvn deploy'
-                }
+                    echo 'mvn clean compile'
             }
         }
     }
