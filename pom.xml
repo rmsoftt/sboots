@@ -94,11 +94,13 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
         <dependency>
             <groupId>com.oracle.jdbc</groupId>
             <artifactId>ojdbc8</artifactId>
             <version>12.2.0.1</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>
